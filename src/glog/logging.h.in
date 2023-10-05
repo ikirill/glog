@@ -1048,10 +1048,10 @@ namespace google {
   static std::atomic<@ac_google_namespace@ ::int64> LOG_PREVIOUS_TIME_RAW;    \
   GLOG_IFDEF_THREAD_SANITIZER(                                                 \
       AnnotateBenignRaceSized(__FILE__, __LINE__, &LOG_TIME_PERIOD,            \
-                              sizeof(@ac_google_namespace @ ::int64), ""));    \
+                              sizeof(@ac_google_namespace@ ::int64), ""));    \
   GLOG_IFDEF_THREAD_SANITIZER(                                                 \
       AnnotateBenignRaceSized(__FILE__, __LINE__, &LOG_PREVIOUS_TIME_RAW,      \
-                              sizeof(@ac_google_namespace @ ::int64), ""));    \
+                              sizeof(@ac_google_namespace@ ::int64), ""));    \
   const auto LOG_CURRENT_TIME =                                                \
       std::chrono::duration_cast<std::chrono::nanoseconds>(                    \
           std::chrono::steady_clock::now().time_since_epoch());                \
